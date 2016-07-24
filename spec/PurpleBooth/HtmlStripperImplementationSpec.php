@@ -4,9 +4,14 @@ namespace spec\PurpleBooth;
 
 use PhpSpec\ObjectBehavior;
 
-class HtmlStripperSpec extends ObjectBehavior
+class HtmlStripperImplementationSpec extends ObjectBehavior
 {
     function it_is_initializable()
+    {
+        $this->shouldHaveType('PurpleBooth\HtmlStripperImplementation');
+    }
+
+    function it_is_represented_by_an_interface()
     {
         $this->shouldHaveType('PurpleBooth\HtmlStripper');
     }

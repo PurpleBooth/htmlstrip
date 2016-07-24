@@ -13,16 +13,30 @@ How To Use
 
 Add the dependency to your composer.json
 ```bash
-php composer.phar require purplebooth/htmlstrip:^0.1.0
+php composer.phar require purplebooth/htmlstrip:^1.0.0
 ```
 
 
 And use it!
 
 ```
-$htmlStripper = new PurpleBooth\HtmlStripper();
+$htmlStripper = new PurpleBooth\HtmlStripperImplementation();
 $htmlStripper->("<p>Hello, world.</p>")
 // -> "Hello, world."
+```
+
+I recommend that you depend upon our interface when you do type checking
+
+```
+use PurpleBooth\HtmlStripper;
+
+class YourClass
+{
+
+    public function __construct(HtmlStripper $htmlStrip)
+    {
+        ... etc ...
+     
 ```
 
 Examples
