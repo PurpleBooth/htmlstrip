@@ -1,0 +1,26 @@
+{
+    "name": "purplebooth/htmlstrip",
+    "description": "Convert a small subset of html into something reasonable you can put in plain text email, or SMS.",
+    "require": {
+      "php": ">=5.4.0"
+    },
+    "require-dev": {
+        "phpspec/phpspec": "2.0.*@dev",
+        "henrikbjorn/phpspec-code-coverage": "^2.1"
+    },
+    "config": {
+        "bin-dir": "bin"
+    },
+    "autoload": {
+        "psr-0": {
+            "": "src"
+        }
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Billie Alice Thompson",
+            "email": "billie@billiecodes.com"
+        }
+    ]
+}
