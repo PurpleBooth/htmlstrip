@@ -6,7 +6,7 @@ can put in plain text email, or SMS.
 
 [![Build Status](https://travis-ci.org/PurpleBooth/htmlstrip.svg?branch=master)](https://travis-ci.org/PurpleBooth/htmlstrip)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/PurpleBooth/htmlstrip/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/PurpleBooth/htmlstrip/?branch=master)
-[![Code Coverage](https://scrutinizer-ci.com/g/PurpleBooth/htmlstrip/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/PurpleBooth/htmlstrip/?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/PurpleBooth/htmlstrip/badge.svg?branch=master)](https://coveralls.io/github/PurpleBooth/htmlstrip?branch=master)
 
 How To Use
 ----------
@@ -36,7 +36,7 @@ class YourClass
     public function __construct(HtmlStripper $htmlStrip)
     {
         ... etc ...
-     
+
 ```
 
 Examples

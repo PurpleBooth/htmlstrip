@@ -2,7 +2,8 @@
     "name": "purplebooth/htmlstrip",
     "description": "Convert a small subset of html into something reasonable you can put in plain text email, or SMS.",
     "require": {
-      "php": ">=5.4.0"
+      "php": ">=5.4.0",
+        "satooshi/php-coveralls": "^1.0"
     },
     "require-dev": {
         "phpspec/phpspec": "2.0.*@dev",
