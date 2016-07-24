@@ -1,5 +1,5 @@
 htmlstrip
-==============
+=========
 
 A class to convert a small subset of html into something reasonable you
 can put in plain text email, or SMS.
@@ -24,11 +24,6 @@ $htmlStripper = new PurpleBooth\HtmlStripper();
 $htmlStripper->("<p>Hello, world.</p>")
 // -> "Hello, world."
 ```
-
-Versioning
-----------
-
-We use [semver](http://semver.org/). See the [releases](https://github.com/PurpleBooth/htmlstrip/releases) for a changelog and versions
 
 Examples
 --------
@@ -127,3 +122,10 @@ Related
 -------
 
 * [Twig Extension](https://github.com/PurpleBooth/twig-htmlstrip)
+
+
+Versioning
+----------
+
+We use [semver](http://semver.org/). See the [releases](https://github.com/PurpleBooth/htmlstrip/releases) for a changelog and versions
+
