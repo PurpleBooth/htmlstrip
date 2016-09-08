@@ -6,8 +6,9 @@
         "satooshi/php-coveralls": "^1.0"
     },
     "require-dev": {
-        "phpspec/phpspec": "2.0.*@dev",
-        "henrikbjorn/phpspec-code-coverage": "^2.1"
+        "phpspec/phpspec": "^2.0.0",
+        "henrikbjorn/phpspec-code-coverage": "^2.1",
+        "sllh/php-cs-fixer-styleci-bridge": "^2.1"
     },
     "config": {
         "bin-dir": "bin"
