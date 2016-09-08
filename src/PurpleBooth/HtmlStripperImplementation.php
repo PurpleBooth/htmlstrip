@@ -3,9 +3,7 @@
 namespace PurpleBooth;
 
 /**
- * Parse HTML to plain text
- *
- * @package PurpleBooth
+ * Parse HTML to plain text.
  */
 class HtmlStripperImplementation implements HtmlStripper
 {
@@ -26,7 +24,7 @@ class HtmlStripperImplementation implements HtmlStripper
         xml_set_element_handler($xmlParser, [$parser, 'startElement'], [$parser, 'endElement']);
         xml_set_character_data_handler($xmlParser, [$parser, 'characterData']);
 
-        $wrappedHtml  = "<root>$html</root>";
+        $wrappedHtml = "<root>$html</root>";
         $returnStatus = xml_parse($xmlParser, $wrappedHtml, true);
 
         if (!$returnStatus) {

@@ -7,16 +7,13 @@ namespace PurpleBooth;
  *
  * @see     xml_parser_create()
  * @see     HtmlStripperExtension
- *
- * @package PurpleBooth
  */
 class Parser
 {
-
     /**
      * @var string
      */
-    private $text = "";
+    private $text = '';
 
     /**
      * @var \SplStack
@@ -41,12 +38,12 @@ class Parser
     public function __construct()
     {
         $this->transformedTextStack = new \SplStack();
-        $this->blockTypeStack       = new \SplStack();
+        $this->blockTypeStack = new \SplStack();
         $this->blockAttributesStack = new \SplStack();
     }
 
     /**
-     * Function called on the start of an element
+     * Function called on the start of an element.
      *
      * Mostly used to prepend text to things, like the "*"s on LIs
      *
@@ -61,8 +58,8 @@ class Parser
         $this->blockBegin($name, $attrs);
 
         switch ($name) {
-            case "LI":
-                $this->appendBlockText("* ");
+            case 'LI':
+                $this->appendBlockText('* ');
                 break;
         }
     }
@@ -79,23 +76,23 @@ class Parser
      */
     private function blockBegin($name, $attributes)
     {
-        $this->transformedTextStack->push("");
+        $this->transformedTextStack->push('');
         $this->blockTypeStack->push($name);
         $this->blockAttributesStack->push($attributes);
     }
 
     /**
-     * Append some text to the current level of the stack
+     * Append some text to the current level of the stack.
      *
      * @param string $value
      */
     private function appendBlockText($value)
     {
-        $this->setBlockText($this->getBlockText() . $value);
+        $this->setBlockText($this->getBlockText().$value);
     }
 
     /**
-     * Set the text for a block
+     * Set the text for a block.
      *
      * @param string $value
      */
@@ -106,7 +103,7 @@ class Parser
     }
 
     /**
-     * Get the current text that's in this block
+     * Get the current text that's in this block.
      *
      * @return string
      */
@@ -116,7 +113,7 @@ class Parser
     }
 
     /**
-     * When we reach a closing element do something
+     * When we reach a closing element do something.
      *
      * This is mostly used to add stuff to the end of a statement, like putting new lines where div tags close
      *
@@ -128,19 +125,19 @@ class Parser
     public function endElement($parser, $name)
     {
         switch ($name) {
-            case "P":
+            case 'P':
                 $this->appendBlockText("\n\n");
                 break;
-            case "UL":
+            case 'UL':
                 $this->appendBlockText("\n\n");
                 break;
-            case "LI":
+            case 'LI':
                 $this->appendBlockText("\n");
                 break;
-            case "DIV":
+            case 'DIV':
                 $this->appendBlockText("\n\n\n");
                 break;
-            case "A":
+            case 'A':
                 $attrs = $this->blockAttributesStack->top();
 
                 if (isset($attrs['HREF'])) {
@@ -158,7 +155,7 @@ class Parser
     }
 
     /**
-     * Get the transformed text off the stack, and clear down the other stacks
+     * Get the transformed text off the stack, and clear down the other stacks.
      *
      * @return string
      */
@@ -172,7 +169,7 @@ class Parser
     }
 
     /**
-     * This converts character data to human character data
+     * This converts character data to human character data.
      *
      * Primarily this is used for removing newlines and replacing them with spaces.
      *
@@ -183,19 +180,19 @@ class Parser
      */
     public function characterData($parser, $data)
     {
-        $this->appendBlockText(str_replace("\n", " ", $data));
+        $this->appendBlockText(str_replace("\n", ' ', $data));
     }
 
     /**
-     * This gets the text that has been parsed and returns it
+     * This gets the text that has been parsed and returns it.
      *
      * @return string
      */
     public function getText()
     {
-        $text  = trim($this->text);
+        $text = trim($this->text);
         $lines = explode("\n", $text);
 
-        return implode("\n", array_map("trim", $lines));
+        return implode("\n", array_map('trim', $lines));
     }
 }
