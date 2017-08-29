@@ -3,11 +3,19 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [Unreleased]
+### Changed
+
+- Added who contributed to Changelog
+
 ## [1.0.2] - 2017-08-29
 ### Added
 
 - This changelog
-- Move Coveralls to dev dependencies.
+
+### Changed
+
+- Move Coveralls to dev dependencies. ([jeffreymb](https://github.com/jeffreymb) - [#10](https://github.com/PurpleBooth/htmlstrip/pull/10))
 
 ## [1.0.1] - 2016-07-24
 
