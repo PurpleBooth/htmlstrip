@@ -67,6 +67,7 @@ class Parser
         switch ($name) {
             case 'LI':
                 $this->appendBlockText('* ');
+
                 break;
         }
     }
@@ -134,15 +135,19 @@ class Parser
         switch ($name) {
             case 'P':
                 $this->appendBlockText("\n\n");
+
                 break;
             case 'UL':
                 $this->appendBlockText("\n\n");
+
                 break;
             case 'LI':
                 $this->appendBlockText("\n");
+
                 break;
             case 'DIV':
                 $this->appendBlockText("\n\n\n");
+
                 break;
             case 'A':
                 $attrs = $this->blockAttributesStack->top();
