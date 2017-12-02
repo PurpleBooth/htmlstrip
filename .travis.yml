@@ -16,6 +16,8 @@ matrix:
       env: PREFIX="phpdbg -qrr "
     - php: 7.1
       env: PREFIX="phpdbg -qrr "
+    - php: 7.2
+      env: PREFIX="phpdbg -qrr "
     - php: nightly
       env: PREFIX="phpdbg -qrr "
 
