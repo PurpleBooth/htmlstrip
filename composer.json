@@ -7,7 +7,7 @@
     "require-dev": {
         "satooshi/php-coveralls": "^1.0",
         "phpspec/phpspec": "^2.0.0",
-        "henrikbjorn/phpspec-code-coverage": "^2.1",
+        "henrikbjorn/phpspec-code-coverage": "^3.0",
         "sllh/php-cs-fixer-styleci-bridge": "^2.1"
     },
     "config": {
